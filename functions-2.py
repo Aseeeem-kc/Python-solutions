@@ -1,22 +1,22 @@
-# tutorial ques-1
-'''
+# 1
+
 def check_divisibility(num):
     if num % 7 == 0:
         return "The number is divisble by 7"
 
 print(check_divisibility(21))
-'''
 
-# ques-2
-'''
+
+# 2
+
 def calculate_si(principle, time, rate):
     si =  (principle * time * rate) / 100
     return si
 print(calculate_si(3000, rate=10, time=2)
-'''
 
-# ques-3
-'''
+      
+# 3
+
 def arith_operation(num1,num2,operation):
     if operation == "+":
         print("The output is ", num1 +  num2)
@@ -57,12 +57,12 @@ find_mmm('mean', [1,2,3,4,5,6,7,8])
 arith_operation(10,1,'+')
 
 find_factorial(10);
-'''
 
 
 
-# home task question:
-'''
+
+# 4
+
 def loginProgram():
     uid = input("Enter your username: ")
     pwd = input("Enter your password: ")
@@ -82,10 +82,10 @@ def loginProgram():
                 print("Too many unsuccessful attempts")
                 break;
 loginProgram()
-'''
 
-# for you exercise-1
-'''
+
+# 5
+
 def swap_program(num1,num2):
     if num1 < num2:
         num1= num2
@@ -94,10 +94,9 @@ def swap_program(num1,num2):
         return num1,num2
 print(swap_program(7,4))
 
-    '''
 
-# exercise- 2
-'''
+# 6
+
 def mrms_name(name,gender):
     if (gender == 'm'):
         return "Mr."+ name
@@ -105,9 +104,9 @@ def mrms_name(name,gender):
         return "Ms." + name
 
 print(mrms_name('sita','f'))
-'''
 
-# for you addiotional exercise
+
+# 7
 import math
 
 def calculate_square_area(side):
