@@ -4,6 +4,7 @@
 
 def string_reverse(string :str):
     return string[::-1]
+# done
 
 
 
@@ -14,6 +15,7 @@ def palindrome_check(string:str):
         return True
     else:
         return False
+# done
 
 
 # Count Vowels
@@ -31,7 +33,7 @@ def count_vowels(string:str):
 # Write a function to determine if a given number is even or odd.
 def odd_even(num: int):
     return num % 2 == 0
-
+# done
 
 
 #Fibonacci Sequence
@@ -42,7 +44,8 @@ def fibonacci_series():
         next_fibonacci = fibonacci_sequence[-1] + fibonacci_sequence[-2]
         fibonacci_sequence.append(next_fibonacci)
     return fibonacci_sequence
-    
+    # done
+
 
 
 
@@ -63,6 +66,7 @@ def is_prime(n: int):
             if n % i == 0:
                 return False
         return True
+# done
 
 
     
@@ -72,6 +76,7 @@ def is_prime(n: int):
 #Write a function to count the number of words in a given sentence.
 def count_words(sentence: str):
     return len(sentence.split())
+# done
 
 
 
@@ -83,7 +88,7 @@ def count_words(sentence: str):
 def reverse_array(my_list):
     result = (my_list[::-1])
     return result
-
+# done
 
 #find_maximum
 
@@ -205,7 +210,7 @@ if __name__ == '__main__':
     # print(fibonacci_series())
     # print(is_prime(99))
     # print(count_words("   the    fun game   "))
-    # print(reverse_array([1,2,4]))
+    print(reverse_array([1,1, -1, 0 , 4, -4]))
     # print(find_maximum([5,4,8,7]))
     # print(find_minimum([5,4,8,7]))
     # print(is_armstrong(143))
@@ -216,7 +221,7 @@ if __name__ == '__main__':
     # print (array_sum([1,2,3,4]))
     # print (find_average([1,6,78,3,2]))
     # print(factorial_finder(5))
-    print(fibo_upto_a_number(10))
+    # print(fibo_upto_a_number(10))
     
 
 
