@@ -75,12 +75,18 @@ def count_words(sentence: str):
 
 
 # Reverse Array
+def reverse_array(my_list):
+    a = [1,2,3,4,5]
+    print(a[::-1])
 
-a = [1,2,3,4,5]
-print(a[::-1])
+
+#find_maximum
+
+def find_maximum(my_list):
+    return max(my_list)
 
 
-# if __name__ == '__main__':
+if __name__ == '__main__':
     # print(stringReverse("12435"))
     # print(palindrome_check("1221"))
     # print(odd_even())
@@ -88,6 +94,8 @@ print(a[::-1])
     # print(fibonacci_series())
     # print(is_prime(99))
     # print(count_words("   the    fun game   "))
+    reverse_array([1,2,4])
+    find_maximum([5,4,8,7])
 
 
 
