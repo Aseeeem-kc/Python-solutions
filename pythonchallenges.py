@@ -74,10 +74,15 @@ def count_words(sentence: str):
     return len(sentence.split())
 
 
+
+
+
+
+
 # Reverse Array
 def reverse_array(my_list):
-    a = [1,2,3,4,5]
-    print(a[::-1])
+    result = (my_list[::-1])
+    return result
 
 
 #find_maximum
@@ -85,6 +90,112 @@ def reverse_array(my_list):
 def find_maximum(my_list):
     return max(my_list)
 
+
+# find minimum
+def find_minimum(my_list):
+    return min(my_list)
+
+
+
+# find Amstrong number:
+
+def is_armstrong(number):
+    num = number
+    num_digits = 0
+    while num > 0:
+        num_digits += 1
+        num //= 10
+    
+    armstrong_sum = 0
+    num = number
+    while num > 0:
+        digit = num % 10
+        armstrong_sum += digit ** num_digits
+        num //= 10
+    
+    return armstrong_sum == number
+
+
+
+# Remove duplicates
+
+def remove_duplicates(my_list):
+    return list(set(my_list))
+
+
+# check anagram
+
+def check_anagram(str1, str2):
+    str1 = str1.replace(" ", "").lower()
+    str2 = str2.replace(" ", "").lower()
+    sorted_str1 = sorted(str1)
+    sorted_str2 = sorted(str2)
+    return sorted_str1 == sorted_str2
+
+
+# count characters
+
+def count_characters(string):
+    char_count = {}
+    for char in string:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+    return char_count
+
+
+
+# check perfect number
+def is_perfect_number(number):
+    divisor_sum = 0
+    for i in range(1, number):
+        if number % i == 0:
+            divisor_sum += i
+    return divisor_sum == number
+
+
+
+# array sum
+
+def array_sum(my_list):
+    return sum(my_list)
+
+
+
+# find average
+
+def find_average(arr):
+    if not arr:
+        return 0
+    return sum(arr) / len(arr)
+    
+
+
+#  factorial finder
+
+def factorial_finder(number):
+    if number < 0:
+        return None
+    if number == 0:
+        return 1  
+    result = 1
+    for i in range(1, number + 1):
+        result *= i
+    return result
+
+
+
+# Fibonacci Sequence up to a number
+def fibo_upto_a_number(n):
+    fibonacci_sequence = []
+    a, b = 0, 1
+    for _ in range(n):
+        fibonacci_sequence.append(a)
+        a, b = b, a + b
+    return fibonacci_sequence
+
+    
 
 if __name__ == '__main__':
     # print(stringReverse("12435"))
@@ -94,8 +205,19 @@ if __name__ == '__main__':
     # print(fibonacci_series())
     # print(is_prime(99))
     # print(count_words("   the    fun game   "))
-    reverse_array([1,2,4])
-    find_maximum([5,4,8,7])
+    # print(reverse_array([1,2,4]))
+    # print(find_maximum([5,4,8,7]))
+    # print(find_minimum([5,4,8,7]))
+    # print(is_armstrong(143))
+    # print(remove_duplicates([1,1,2,5,6,4,6,7,5]))
+    # print(check_anagram("john", "sia"))
+    # print(count_characters("lionel messi"))
+    # print (is_perfect_number(6))
+    # print (array_sum([1,2,3,4]))
+    # print (find_average([1,6,78,3,2]))
+    # print(factorial_finder(5))
+    print(fibo_upto_a_number(10))
+    
 
 
 
