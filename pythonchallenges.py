@@ -45,6 +45,7 @@ def fibonacci_series():
     
 
 
+
 # Check Prime
 # Write a function to check if a given number is prime.
 import math
@@ -73,13 +74,20 @@ def count_words(sentence: str):
     return len(sentence.split())
 
 
-if __name__ == '__main__':
+# Reverse Array
+
+a = [1,2,3,4,5]
+print(a[::-1])
+
+
+# if __name__ == '__main__':
     # print(stringReverse("12435"))
     # print(palindrome_check("1221"))
     # print(odd_even())
    
     # print(fibonacci_series())
     # print(is_prime(99))
-    print(count_words("   the    fun game   "))
+    # print(count_words("   the    fun game   "))
+
 
 
