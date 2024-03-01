@@ -70,7 +70,7 @@ function reverseArray(arr) {
     const reversedArr = arr.slice().reverse();
     return reversedArr;
 }
-// console.log(reverseArray([1, 2, 4]));
+console.log(reverseArray([ , ]));
 
 // Find maximum
 function findMaximum(arr) {
