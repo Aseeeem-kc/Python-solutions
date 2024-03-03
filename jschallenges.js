@@ -12,6 +12,11 @@ function palindromeCheck(string) {
 }
 // console.log(palindromeCheck("1221"));
 
+
+
+
+
+
 // Count vowels
 function countVowels(string) {
     const vowels = "aeiouAEIOU";
@@ -70,7 +75,7 @@ function reverseArray(arr) {
     const reversedArr = arr.slice().reverse();
     return reversedArr;
 }
-console.log(reverseArray([ , ]));
+console.log(reverseArray([]));
 
 // Find maximum
 function findMaximum(arr) {
