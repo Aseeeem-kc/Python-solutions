@@ -143,11 +143,13 @@ def check_anagram(str1, str2):
 def count_characters(string):
     char_count = {}
     for char in string:
-        if char in char_count:
-            char_count[char] += 1
-        else:
-            char_count[char] = 1
+        if char != " ":  # Skip spaces
+            if char in char_count:
+                char_count[char] += 1
+            else:
+                char_count[char] = 1
     return char_count
+
 
 
 
@@ -171,8 +173,6 @@ def array_sum(my_list):
 # find average
 
 def find_average(arr):
-    if not arr:
-        return 0
     return sum(arr) / len(arr)
     
 
@@ -211,16 +211,16 @@ if __name__ == '__main__':
     # print(is_prime(99))
     # print(count_words("   the    fun game   "))
     # print(reverse_array([1,1, -1, 0 , 4, -4]))
-    print (find_maximum([-4,-5,-1,-9]))
+    # print (find_maximum([]))
     # print(find_minimum([5,4,8,7]))
     # print(is_armstrong(143))
-    # print(remove_duplicates([1,1,2,5,6,4,6,7,5]))
-    # print(check_anagram("john", "sia"))
+    # print(remove_duplicates([]))
+    # print(check_anagram("hello", "john"))
     # print(count_characters("lionel messi"))
-    # print (is_perfect_number(6))
-    # print (array_sum([1,2,3,4]))
+    # print (is_perfect_number(0))
+    # print (array_sum([]))
     # print (find_average([1,6,78,3,2]))
-    # print(factorial_finder(5))
+    print(factorial_finder(-5))
     # print(fibo_upto_a_number(10))
     
 

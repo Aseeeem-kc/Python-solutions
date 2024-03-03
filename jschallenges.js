@@ -82,7 +82,11 @@ function findMaximum(arr) {
     const max = Math.max(...arr);
     return max;
 }
-// console.log(findMaximum([5, 4, 8, 7]));
+console.log(findMaximum([5, 4, 8, 7]));
+
+
+
+
 
 // Find minimum
 function findMinimum(arr) {
@@ -90,6 +94,9 @@ function findMinimum(arr) {
     return min;
 }
 // console.log(findMinimum([5, 4, 8, 7]));
+
+
+
 
 // Check Armstrong number
 function isArmstrong(number) {
@@ -124,11 +131,14 @@ function checkAnagram(str1, str2) {
 function countCharacters(string) {
     const charCount = {};
     for (let char of string) {
-        charCount[char] = (charCount[char] || 0) + 1;
+        if (char !== " ") { // Skip spaces
+            charCount[char] = (charCount[char] || 0) + 1;
+        }
     }
     return charCount;
 }
-// console.log(countCharacters("hello world"));
+console.log(countCharacters("hello world"));
+
 
 // Check perfect number
 function isPerfectNumber(number) {
