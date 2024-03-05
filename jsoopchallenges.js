@@ -201,3 +201,6 @@ class Employee {
 let employee1 = new Employee("John", 20);
 let salary = employee1.calculateSalary(40);
 console.log("Salary for 40 hours worked:", salary); // Output: Salary for 40 hours worked: 800
+
+
+// cpmpleted creating bundle
