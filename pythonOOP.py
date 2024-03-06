@@ -1,24 +1,38 @@
-class Myfirstclass:
-    def __init__(self, name, age, address):
-        self.name = name
-        self.age = age
-        self.addres = address
+class Employee:
 
+    num_of_emps: 0
+    raise_amount = 1.04
 
-    def working(self):
-        print('Im working')
+    def __init__ (self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.pay = pay
+        self.email = first + '.' + last + '@company.com'
+
+    def fullname(self):
+        return '{} {}'.format(self.first, self.last)
     
-    def eating(self):
-        print('Im eating')
+    def apply_raise(self):
+        self.pay = int(self.pay * self.raise_amount)
+    
+    @classmethod
+    def set_raise_amt(cls, amount):
+        cls.raise_amount = amount
+
+    @staticmethod
+    def is_workday(day):
+        if day.weekday() == 5 or day.weekday() == 6:
+            return False
+        return True
+        
+    
+
+    
+emp_1 = Employee('Corey', 'kc', 50000)
+emp_2 = Employee("Test", "user", 60000)
 
 
-class Inheritedclass(Myfirstclass):
-    def __init__(self, name, age, address, cilas):
-        Myfirstclass.__init__(self, name, age, address)
-        self.cilas = cilas
+import datetime
+my_date = datetime.date(2016, 7, 14)
 
-p1 = Inheritedclass('ashim', 18, 'pepsicola', 'secondsem')
-print(p1.name)
-print(p1.cilas)
-p1.working()
-
+print(Employee.is_workday(my_date))
