@@ -202,7 +202,7 @@ def fibo_upto_a_number(n):
 
     
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
     # print(stringReverse("12435"))
     # print(palindrome_check("1221"))
     # print(odd_even())
@@ -220,9 +220,70 @@ if __name__ == '__main__':
     # print (is_perfect_number(0))
     # print (array_sum([]))
     # print (find_average([1,6,78,3,2]))
-    print(factorial_finder(-5))
+    # print(factorial_finder(-5))
     # print(fibo_upto_a_number(10))
-    
+
+
+
+# leetcode questions
+
+# Two sum = Sum to Target
+# "Given an array of integers called 'nums' and an integer 'target', find the index of two distinct numbers in the array that add up to the given target. Assume that there is exactly one solution for each input.
+def sum_to_target(nums, target):
+    num_dict = {}
+    for i, num in enumerate(nums):
+        complement = target - num
+        if complement in num_dict:
+            return [num_dict[complement], i]
+        num_dict[num] = i
+    return []
+
+nums = [2, 7, 11, 15]
+target = 9
+print(sum_to_target(nums, target))
+
+
+
+# matrix transposition
+def matrix_transposition(matrix):
+    return [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0]))]
+
+
+# List Sorting
+
+def custom_sort(nums):
+    for i in range(len(nums)):
+        for j in range(len(nums) - 1):
+            if nums[j] > nums[j + 1]:
+                nums[j], nums[j + 1] = nums[j + 1], nums[j]
+    return nums
+
+
+# Pascal's triangle
+
+def generate_pascals_triangle(num_rows):
+    triangle = [[1]]
+    for i in range(1, num_rows):
+        row = [1]
+        for j in range(1, i):
+            row.append(triangle[i-1][j-1] + triangle[i-1][j])
+        row.append(1)
+        triangle.append(row)
+    return triangle
+
+# Prime Factorization
+
+def prime_factors(num):
+    factors = []
+    divisor = 2
+    while num > 1:
+        while num % divisor == 0:
+            factors.append(divisor)
+            num //= divisor
+        divisor += 1
+    return factors
+
+print(prime_factors(56) == [2, 2, 2, 7])
 
 
 

@@ -4,9 +4,14 @@
 # part-2 -  inheritance
 # part-3 -  encapsulation
 # part-4 -  polymorphism
+# part-5 -  abstract
 
-class Vehicle:
 
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+
+    @abstractmethod
     def __init__(self, brand, model, year, color):
         self.brand = brand
         self.model = model
@@ -15,23 +20,23 @@ class Vehicle:
         self.__mileage = 0
 
 
-    def set_mileage(self, mileage):
-        self.__mileage = mileage
+    # def set_mileage(self, mileage):
+    #     self.__mileage = mileage
 
-    def get_service(self):
-        if self.__mileage < 15:
-            print ("Time for service")
-        else:
-            print("Not necesary to service the vehicle")
+    # def get_service(self):
+    #     if self.__mileage < 15:
+    #         print ("Time for service")
+    #     else:
+    #         print("Not necesary to service the vehicle")
 
-    def start(self):
-        print("vehile started")
+    # def start(self):
+    #     print("vehile started")
 
-    def stop(self):
-        print("vehicle stopped")
+    # def stop(self):
+    #     print("vehicle stopped")
     
-    def drive(self):
-        print("vehicle is moving forward")
+    # def drive(self):
+    #     print("vehicle is moving forward")
 
 
 class car(Vehicle):
@@ -58,6 +63,5 @@ vehicle.start()
 
 car = car("honda", 123, 2020, "white", 5)
 car.start()
-car.brought_in()
 
         
