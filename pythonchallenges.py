@@ -282,8 +282,47 @@ def prime_factors(num):
             num //= divisor
         divisor += 1
     return factors
+    
 
-print(prime_factors(56) == [2, 2, 2, 7])
+# binary to decimal
 
+def binary_to_decimal(binary_num):
+    return int(binary_num, 2)
 
+# decimal to binary
 
+def decimal_to_binary(decimal_num):
+    return bin(decimal_num)[2:]
+
+# fibonacci with recursion
+
+def fibonacci_recursive(limit):
+    if limit == 0:
+        return [0]
+    elif limit == 1:
+        return [0, 1]
+    else:
+        fib = fibonacci_recursive(limit - 1)
+        fib.append(fib[-1] + fib[-2])
+        return fib
+
+# Unique Paths in a grid
+    
+def unique_paths(m, n):
+    dp = [[1] * n] * m
+    for i in range(1, m):
+        for j in range(1, n):
+            dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
+    return dp[m - 1][n - 1]
+
+# Stack Sorting
+
+def sort_stack(stack):
+    temp_stack = []
+    while stack:
+        temp = stack.pop()
+        while temp_stack and temp_stack[-1] > temp:
+            stack.append(temp_stack.pop())
+        temp_stack.append(temp)
+    while temp_stack:
+        stack.append(temp_stack.pop())
