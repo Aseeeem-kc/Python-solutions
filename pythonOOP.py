@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 
-
 class Person:
     def __init__(self, name, age):
         self.name = name
@@ -24,9 +23,7 @@ class Person:
         print(self.__lifeexp)
     
     
-    
-    
-
+  
 class Student(Person):
     def __init__(self, name,age, major):
         super().__init__(name, age)
@@ -38,15 +35,11 @@ class Student(Person):
     def getLifeexp(self):
         print(self.__lifeexp)
 
-   
-
     def marks(self):
         print("The student got 30 out of 50!")
 
     def spendTime(self):
         print("A student spends most of his time studying")
-
-
 
 
 class Driver(Person):
@@ -66,8 +59,6 @@ class Driver(Person):
     def getLifeexp(self):
         print(self.__lifeexp)
 
-
-
 # s1 = Student("John",30, "Science")
 # d1 = Driver("rick",43, "Truck")
 
@@ -80,9 +71,6 @@ class Driver(Person):
 # print(person1) # str method (prints out repr method if no str is called)
 # print([person1]) # repr method
 
-
-
-  
 # Create Abstract base class 
 class Car(ABC): 
   def __init__(self, brand, model, year): 
@@ -116,16 +104,13 @@ class Hatchback(Car):
 # Create a child class 
 class Suv(Car): 
     
-  def printDetails(self): 
-    print("Brand:", self.brand); 
-    print("Model:", self.model); 
-    print("Year:", self.year); 
+  # def printDe/
     
   def Sunroof(self): 
     print("Available") 
   
-ogcar = Car("Maruti", "Alto", "2022")
+# ogcar = Car("Maruti", "Alto", "2022")
 car1 = Hatchback("Maruti", "Alto", "2022"); 
   
-# car1.printDetails()
 car1.printDetails()
+# car1.printDetails()
